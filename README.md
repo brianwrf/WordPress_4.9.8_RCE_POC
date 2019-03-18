@@ -118,7 +118,7 @@ _wpnonce=ab3340b93c&_wp_http_referer=%2Fwp-admin%2Fpost.php%3Fpost%3D6%26action%
 #### 9. Crop the image
 * Repeat the POST request `/wp-admin/admin-ajax.php` captured in step 5 in Burp Repeater;
 * Take a note on the cropped image file name, e.g. `poc-e1551133870454.jpg`.
-![](http://avfisher.win/wp-content/uploads/2019/02/step_9.png)
+![](http://avfisher.win/wp-content/uploads/2019/03/step_9.png)
 
 #### 10. Create the post carrying the payload by adding a post
 * Click `Posts` - `Add New` to create a new post and click `Publish`;
